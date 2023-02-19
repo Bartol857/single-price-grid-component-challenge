@@ -1,0 +1,113 @@
+@use './colors' as *;
+
+*,
+*::after,
+*::before {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	background-color: $lightgray;
+	font-family: 'Karla', sans-serif;
+	color: $lightgray;
+}
+
+.boxes {
+	margin: 40px auto;
+	width: 80%;
+	border-radius: 8px;
+	box-shadow: 0px -5px 20px -10px $dark;
+	overflow: hidden;
+
+	&__box {
+		padding: 1.5rem;
+	}
+
+	&__title {
+		margin-bottom: 1.5rem;
+		font-size: 1.125rem;
+		font-weight: bold;
+	}
+
+	&__subtitle {
+		color: $brighyellow;
+		font-weight: bold;
+	}
+
+	&__text{
+		margin: .5rem 0;
+	}
+
+	&__price{
+		display: flex;
+		align-items: center;
+		color: $graycyan;
+
+		span{
+			margin-right: .75rem;
+			font-size: 2rem;
+			color: $white;
+			font-weight: bold;
+		}
+	}
+
+	&__btn{
+		margin: 1rem 0;
+		padding: 1rem;
+		width: 100%;
+		background-color: $brighyellow;
+		color: $white;
+		font-family: 'Karla', sans-serif;
+		border: none;
+		border-radius: 8px;
+		box-shadow: 0px 5px 20px -10px $dark;
+		transition: background-color .3s;
+	}
+
+	&__btn:hover {
+		background-color: $yellow;
+	}
+
+	li{
+		font-size: 0.8125rem;
+		line-height: 1.25rem;
+		list-style: none;
+		color: $graycyan;
+	}
+
+}
+
+.one {
+	background-color: $white;
+
+	.boxes__title {
+		color: $cyan;
+	}
+
+	.boxes__text {
+		font-size: 0.8125rem;
+		line-height: 1.5rem;
+		color: $grayishblue;
+	}
+}
+.two {
+	background-color: $cyan;
+}
+.three {
+	background-color: $lightcyan;
+}
+
+footer {
+	.attribution {
+		font-size: 11px;
+		text-align: center;
+		color: $cyan;
+	}
+	.attribution a {
+		color: $grayishblue;
+	}
+}
+
+@import './desktop';

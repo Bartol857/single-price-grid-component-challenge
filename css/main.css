@@ -1,0 +1,129 @@
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: hsl(204deg, 43%, 93%);
+  font-family: "Karla", sans-serif;
+  color: hsl(204deg, 43%, 93%);
+}
+
+.boxes {
+  margin: 40px auto;
+  width: 80%;
+  border-radius: 8px;
+  box-shadow: 0px -5px 20px -10px hsl(0deg, 0%, 25%);
+  overflow: hidden;
+}
+.boxes__box {
+  padding: 1.5rem;
+}
+.boxes__title {
+  margin-bottom: 1.5rem;
+  font-size: 1.125rem;
+  font-weight: bold;
+}
+.boxes__subtitle {
+  color: hsl(71deg, 73%, 54%);
+  font-weight: bold;
+}
+.boxes__text {
+  margin: 0.5rem 0;
+}
+.boxes__price {
+  display: flex;
+  align-items: center;
+  color: hsl(183deg, 71%, 72%);
+}
+.boxes__price span {
+  margin-right: 0.75rem;
+  font-size: 2rem;
+  color: hsl(0deg, 0%, 100%);
+  font-weight: bold;
+}
+.boxes__btn {
+  margin: 1rem 0;
+  padding: 1rem;
+  width: 100%;
+  background-color: hsl(71deg, 73%, 54%);
+  color: hsl(0deg, 0%, 100%);
+  font-family: "Karla", sans-serif;
+  border: none;
+  border-radius: 8px;
+  box-shadow: 0px 5px 20px -10px hsl(0deg, 0%, 25%);
+  transition: background-color 0.3s;
+}
+.boxes__btn:hover {
+  background-color: hsl(70deg, 71%, 44%);
+}
+.boxes li {
+  font-size: 0.8125rem;
+  line-height: 1.25rem;
+  list-style: none;
+  color: hsl(183deg, 71%, 72%);
+}
+
+.one {
+  background-color: hsl(0deg, 0%, 100%);
+}
+.one .boxes__title {
+  color: hsl(179deg, 62%, 43%);
+}
+.one .boxes__text {
+  font-size: 0.8125rem;
+  line-height: 1.5rem;
+  color: hsl(218deg, 22%, 67%);
+}
+
+.two {
+  background-color: hsl(179deg, 62%, 43%);
+}
+
+.three {
+  background-color: hsl(179deg, 47%, 52%);
+}
+
+footer .attribution {
+  font-size: 11px;
+  text-align: center;
+  color: hsl(179deg, 62%, 43%);
+}
+footer .attribution a {
+  color: hsl(218deg, 22%, 67%);
+}
+
+@media (min-width: 768px) {
+  .boxes {
+    margin: 80px auto;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .boxes .one {
+    grid-column: 1/-1;
+    grid-row: 1/2;
+  }
+  .boxes .two {
+    grid-column: 1/2;
+    grid-row: 2/3;
+  }
+  .boxes .three {
+    grid-column: 2/3;
+    grid-row: 2/3;
+  }
+}
+@media (min-width: 992px) {
+  .boxes {
+    margin: 80px auto;
+    width: 60%;
+  }
+}
+@media (min-width: 1200px) {
+  .boxes {
+    margin: 120px auto;
+    width: 40%;
+  }
+}/*# sourceMappingURL=main.css.map */
